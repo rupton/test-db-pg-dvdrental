@@ -10,8 +10,8 @@ ENV POSTGRES_PASSWORD="dvdrental"
 # We need first download archive with DVD Rental backup and then extract it
 ENV ARCHIVE_NAME="dvdrental.zip"
 ENV BACKUP_NAME="dvdrental.tar"
-ENV URL="http://www.postgresqltutorial.com/wp-content/uploads/2017/10/${ARCHIVE_NAME}"
-
+# ENV URL="http://www.postgresqltutorial.com/wp-content/uploads/2017/10/${ARCHIVE_NAME}"
+ENV URL="https://sp.postgresqltutorial.com/wp-content/uploads/2019/05/${ARCHIVE_NAME}"
 RUN apt-get update && apt-get install -y wget unzip
 
 RUN wget -nv "${URL}" -O "/tmp/${ARCHIVE_NAME}" \
